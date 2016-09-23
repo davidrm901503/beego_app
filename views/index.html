@@ -1,0 +1,30 @@
+<!doctype html>
+<html ng-app>
+
+<head>
+  <title>Angular</title>
+  <script src='/static/js/angular.min.js'></script>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+  <script src='/static/js/app.js'></script>
+  <link rel='stylesheet' href='/static/css/css.css'> 
+</head>
+
+<body>
+<div class='container' ng-controller='AppCtrl'>
+
+  <ul class='grey rounded-box'>
+    <li ng-repeat='t in lista'>
+      {{t.Title}}
+    </li>
+  </ul>
+
+  <form>
+    <input type='text' class='rounded-box' placeholder='escribe' ng-model='todoText'>
+    <button class='grey rounded-box' ng-click='add()' ng-disabled='working'>Agregar</button>
+  </form>
+
+ 
+</div>
+</body>
+</html>
